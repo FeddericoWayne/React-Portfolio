@@ -1,0 +1,31 @@
+:root {
+    --margorelle: #724CF9;
+    --uranian-blue: #A9D3FF;
+}
+
+.footer-wrapper {
+    padding-block: 0px;
+    background-color: var(--margorelle);
+    display: flex;
+    flex-direction: row;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.footer-wrapper:hover {
+    background-color: var(--uranian-blue);
+}
+
+.footer-title {
+    user-select: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 2rem;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.footer-wrapper:hover .footer-title {
+    color: black;
+}
