@@ -1,6 +1,24 @@
 :root {
     --margorelle: #724CF9;
     --uranian-blue: #A9D3FF;
+    --mindaro: #EDF67D;
+    --persian-pink: #F896D8;
+    --meadow: #d0fbff;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+        padding: 3px;
+        border-radius: 5px;
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+        background-color: var(--mindaro);
+        padding: 3px;
+        border-radius: 5px;
+        box-shadow: 3px 3px var(--powder-blue);
+    }
 }
 
 .footer-wrapper {
@@ -8,6 +26,8 @@
     background-color: var(--margorelle);
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     transition: all;
     transition-duration: 0.3s;
 }
@@ -22,11 +42,33 @@
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    margin-left: 2rem;
+    margin-inline: 2rem;
     transition: all;
     transition-duration: 0.3s;
 }
 
 .footer-wrapper:hover .footer-title {
     color: black;
+}
+
+#github,#linkedin,#facebook,#instagram {
+    height: 25px;
+    padding: 3px;
+    background-color: var(--meadow);
+    border-radius: 25px;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.social-icon {
+    margin-inline: 25px;
+}
+
+.social-icon img:hover {
+    animation: spin 0.5s 1 forwards;
+
+}
+
+.social-icon:active {
+    transform: translateY(3px);
 }
