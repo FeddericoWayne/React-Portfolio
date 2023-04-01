@@ -1,3 +1,9 @@
+:root {
+    --meadow: #d0fbff;
+    --eggshell: #fdffd0;
+}
+
 .project-wrapper {
     height: 100vh;
+    background:linear-gradient(180deg, white 0%, var(--eggshell) 60%, var(--meadow) 100%); 
 }
