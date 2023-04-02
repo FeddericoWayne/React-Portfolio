@@ -6,6 +6,7 @@
     --cadet-grey: #93ACB5;
     --uranian-blue: #A9D3FF;
     --powder-blue: #AFBED1;
+    --heliotrope: #CA7DF9;
 }
 
 @keyframes blink {
@@ -19,6 +20,7 @@
         opacity: 0%;
     }
 }
+
 
 .header-container {
     z-index: 2;
@@ -61,6 +63,8 @@
 }
 
 .navlink {
+    padding-inline: 10px;
+    padding-bottom: 25px;
     text-decoration: none;
     text-align: center;
     position:relative;
@@ -70,6 +74,12 @@
     color: white;
     transition: all;
     transition-duration: 0.3s;
+}
+
+.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 70% 45%, 50% 100%, 50% 45%, 0% 45%);
+    background-color: white;
+    color: black;
 }
 
 .header-container:hover .header-title, .header-container:hover .navlink {
@@ -133,11 +143,15 @@
         justify-content: center;
         margin:0;
         column-gap: 1.5rem;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
     }
 
     .navlink {
         font-size: 0.8em;
+    }
+
+    .active {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 60% 45%, 50% 100%, 40% 45%, 0% 45%);
     }
     
     .header-container:hover::after {

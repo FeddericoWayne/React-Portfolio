@@ -1,33 +1,41 @@
 :root {
     --heliotrope: #CA7DF9;
     --neon: #FFFF00;
-    --pastel-pink: #EAC5D8;
+    --pastel-pink: rgb(234, 197, 216);
+    --zesty: #fe7f2a;
 }
 
 .project-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background:rgb(121, 121, 121)
+    background-image: url('../../public/assets/bg/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about-me-container {
+    position: absolute;
+    //left: -120vw;
     text-align: center;
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
     height: 70vh;
     border: 5px solid white;
-    background-color: var(--pastel-pink);
+    background-color: rgba(234, 197, 216, 0.9);
     border-radius: 25px;
+
     transition: all;
     transition-duration: 0.3s;
 }
 
 .about-me-container:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     border: 5px solid var(--neon);
     box-shadow: 0 0 15px 10px var(--neon);
 }
