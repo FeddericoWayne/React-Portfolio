@@ -1,9 +1,33 @@
 :root {
-    --meadow: #d0fbff;
-    --eggshell: #fdffd0;
+    --heliotrope: #CA7DF9;
+    --neon: #FFFF00;
+    --pastel-pink: #EAC5D8;
 }
 
-.project-wrapper {
+.project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     height: 80vh;
-    background:rgb(46, 46, 46)
+    background:rgb(121, 121, 121)
+}
+
+.about-me-container {
+    text-align: center;
+    box-sizing: border-box;
+    padding:25px;
+    width: 90vw;
+    height: 70vh;
+    border: 5px solid white;
+    background-color: var(--pastel-pink);
+    border-radius: 25px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.about-me-container:hover {
+    background-color: white;
+    border: 5px solid var(--neon);
+    box-shadow: 0 0 15px 10px var(--neon);
 }

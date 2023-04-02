@@ -5,7 +5,7 @@ import '../styles/header.css'
 export default function Header() {
     return (
 
-        <div className="header-wrapper">
+        <div className="header-container">
             <h1 className="header-title">FRED DIAZ-WANG</h1>
             <Navigation />
         </div>

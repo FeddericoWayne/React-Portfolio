@@ -15,12 +15,12 @@
         opacity: 100%;
     }
     100% {
-        transform: scaleX(5);
+        transform: scaleX(4);
         opacity: 0%;
     }
 }
 
-.header-wrapper {
+.header-container {
     z-index: 2;
     position:relative;
     padding-block: 0px;
@@ -30,7 +30,7 @@
     align-items: baseline;
 }
 
-.header-wrapper::after {
+.header-container::after {
     position: absolute;
     z-index: -1;
     top:0;
@@ -45,7 +45,7 @@
     transition-duration: 0.3s;
 }
 
-.header-wrapper:hover::after {
+.header-container:hover::after {
     transform: scaleY(1);
     transform-origin: center;
 }
@@ -60,7 +60,8 @@
     transition-duration: 0.3s;
 }
 
-.navlinks {
+.navlink {
+    text-decoration: none;
     text-align: center;
     position:relative;
     width: 100px;
@@ -71,52 +72,51 @@
     transition-duration: 0.3s;
 }
 
-.header-wrapper:hover .header-title, .header-wrapper:hover .navlinks {
+.header-container:hover .header-title, .header-container:hover .navlink {
     color: black;
 }
 
-.navlinks-wrapper {
+.navlinks-container {
     display: flex;
     flex-direction: row;
     margin-inline:auto;
-    column-gap: 1vw;
-    margin-left: auto;
+    column-gap: 5vw;
     margin-right: 2rem;
 }
 
-.navlinks:hover {
+.navlink:hover {
     text-shadow: 1px 1px rgba(0,0,0,0.4);
     color: var(--persian-pink) !important;
 }
 
-.navlinks:active {
+.navlink:active {
     color: var(--mindaro) !important;
     transform: translateY(3px);
     transition: none;
 }
 
-.navlinks::before {
+.navlink::before {
     content: "";
     display: block;
     left: 0;
-    top: -2px;
+    top: 1rem;
     z-index: -1;
     background-color: white;
     position: absolute;
     width: 100px;
-    height: 25px;
+    height: 5px;
     border-radius: 10px;
     transform: scaleX(0);
 
 }
 
-.navlinks:hover::before {
+.navlink:hover::before {
     animation: blink 0.3s 1;
 }
 
 
 @media screen and (max-width: 860px) {
-    .header-wrapper {
+    .header-container {
         display: block;
     }
 
@@ -129,26 +129,26 @@
         margin-bottom: 15px;
     }
 
-    .navlinks-wrapper {
+    .navlinks-container {
         justify-content: center;
         margin:0;
-        column-gap: 0;
+        column-gap: 1.5rem;
         padding-bottom: 15px;
     }
 
-    .navlinks {
+    .navlink {
         font-size: 0.8em;
     }
     
-    .header-wrapper:hover::after {
+    .header-container:hover::after {
         transform: none;
     }
 
-    .navlinks:hover::before {
+    .navlink:hover::before {
         animation: none;
     }
 
-    .navlinks:active {
+    .navlink:active {
         color: var(--mindaro) !important;
         transform: translateY(3px);
         transition: none;
