@@ -7,20 +7,17 @@ import Navigation from './components/Navigation';
 
 function App() {
 
-  const [ currentView, setCurrentView ] = useState('about');
+  const [ currentView, setCurrentView ] = useState('portfolio');
 
   const handlePageDisplay = (page) => setCurrentView(page);
 
+  
   return (
     <div>
       <Header currentView={currentView} handlePageDisplay={handlePageDisplay}/>
       <Project currentView={currentView}/>
       <Footer />
     </div>
-
-
-
-
   )
 }
 

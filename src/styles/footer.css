@@ -34,7 +34,7 @@
 
 .footer-container:hover {
     background-color: var(--uranian-blue);
-    box-shadow: 0px 5px 15px 15px var(--uranian-blue);
+    box-shadow: 0px -5px 20px 15px var(--uranian-blue);
 }
 
 .footer-title {

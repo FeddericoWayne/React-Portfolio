@@ -1,11 +1,13 @@
 :root {
-    --heliotrope: #CA7DF9;
     --neon: #FFFF00;
-    --pastel-pink: rgb(234, 197, 216);
-    --zesty: #fe7f2a;
+    --heliotrope: rgba(202, 125, 249, 0.9);
+    --pastel-pink: rgba(234, 197, 216, 0.9);
+    --zesty: rgba(254, 127, 42, 0.9);
+    --periwinkle: rgba(150, 247, 202,0.9);
 }
 
 .project-container {
+    z-index: -1;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -20,21 +22,64 @@
 
 .about-me-container {
     position: absolute;
-    //left: -120vw;
     text-align: center;
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
     height: 70vh;
     border: 5px solid white;
-    background-color: rgba(234, 197, 216, 0.9);
+    background-color: var(--pastel-pink);
     border-radius: 25px;
-
     transition: all;
     transition-duration: 0.3s;
 }
 
-.about-me-container:hover {
+.portfolio-container {
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    padding:25px;
+    width: 90vw;
+    height: 70vh;
+    border: 5px solid white;
+    background-color: var(--zesty);
+    border-radius: 25px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.contact-container {
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    padding:25px;
+    width: 90vw;
+    height: 70vh;
+    border: 5px solid white;
+    background-color: var(--heliotrope);
+    border-radius: 25px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.resume-container {
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    padding:25px;
+    width: 90vw;
+    height: 70vh;
+    border: 5px solid white;
+    background-color: var(--periwinkle);
+    border-radius: 25px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.about-me-container:hover, 
+.portfolio-container:hover, 
+.contact-container:hover,
+.resume-container:hover {
     background-color: rgba(255, 255, 255, 0.95);
     border: 5px solid var(--neon);
     box-shadow: 0 0 15px 10px var(--neon);

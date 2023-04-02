@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default function Naviation({ currentView,handlePageDisplay }) {
+
+
+
     return (
         <div className='navlinks-container'>
 
