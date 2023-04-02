@@ -10,12 +10,12 @@
 
 @keyframes blink {
     0% {
-        transform: scale(1);
+        transform: scaleX(1);
 
         opacity: 100%;
     }
     100% {
-        transform: scale(2);
+        transform: scaleX(5);
         opacity: 0%;
     }
 }
@@ -59,6 +59,7 @@
     transition: all;
     transition-duration: 0.3s;
 }
+
 .navlinks {
     text-align: center;
     position:relative;
@@ -78,47 +79,20 @@
     display: flex;
     flex-direction: row;
     margin-inline:auto;
-    column-gap: 5vw;
+    column-gap: 1vw;
+    margin-left: auto;
+    margin-right: 2rem;
 }
-
 
 .navlinks:hover {
     text-shadow: 1px 1px rgba(0,0,0,0.4);
     color: var(--persian-pink) !important;
 }
 
-.navlinks::after {
-    content: "";
-    display: block;
-    left: 0;
-    top: -2px;
-    z-index: -1;
-    background-color: var(--mindaro);
-    border-radius: 15px;
-    position: absolute;
-    width: 100px;
-    height: 25px;
-    transform: scaleX(0);
-    transition: all;
-    transition-duration: 0.3s;
-    box-shadow: 5px 5px var(--powder-blue);
-}
-
-.navlinks:hover::after {
-    transform:scaleX(1);
-}
-
 .navlinks:active {
-    color: black !important;
+    color: var(--mindaro) !important;
     transform: translateY(3px);
     transition: none;
-}
-
-.navlinks:active::after {
-    transition: none;
-    box-shadow: none;
-    background-color: var(--cadet-grey);
-    border: 2px solid white;
 }
 
 .navlinks::before {
@@ -127,21 +101,59 @@
     left: 0;
     top: -2px;
     z-index: -1;
-    background-color: var(--mindaro);
-    border-radius: 15px;
+    background-color: white;
     position: absolute;
     width: 100px;
     height: 25px;
+    border-radius: 10px;
     transform: scaleX(0);
 
 }
 
 .navlinks:hover::before {
-    animation: blink 0.5s 1;
+    animation: blink 0.3s 1;
 }
 
-.navlinks:active::before {
-    animation: none;
+
+@media screen and (max-width: 860px) {
+    .header-wrapper {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 25px;
+        margin-top:0;
+        margin-inline:0;
+        margin-bottom: 15px;
+    }
+
+    .navlinks-wrapper {
+        justify-content: center;
+        margin:0;
+        column-gap: 0;
+        padding-bottom: 15px;
+    }
+
+    .navlinks {
+        font-size: 0.8em;
+    }
+    
+    .header-wrapper:hover::after {
+        transform: none;
+    }
+
+    .navlinks:hover::before {
+        animation: none;
+    }
+
+    .navlinks:active {
+        color: var(--mindaro) !important;
+        transform: translateY(3px);
+        transition: none;
+    }
+
 }
 
 

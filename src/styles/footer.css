@@ -72,3 +72,18 @@
 .social-icon:active {
     transform: translateY(3px);
 }
+
+@media screen and (max-width: 670px) {
+    .footer-wrapper {
+        display: block;
+        margin:0;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 15px;
+    }
+
+    .footer-title {
+        margin-bottom: 20px;
+    }
+
+}
