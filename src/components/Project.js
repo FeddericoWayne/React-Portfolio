@@ -1,4 +1,5 @@
 import React from 'react';
+import About from './pages/About';
 import '../styles/project.css'
 
 export default function Project(props) {
@@ -7,7 +8,7 @@ export default function Project(props) {
         return (
             <div className='project-container'>
                 <div className='about-me-container in-view'>
-                    <div className='about-me'>About Me</div>    
+                    <About />    
                 </div>
                 <div className='portfolio-container'>
                     <div className='portfolio'>Portfolio</div>    

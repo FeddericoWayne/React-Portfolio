@@ -17,7 +17,7 @@
         background-color: var(--mindaro);
         padding: 3px;
         border-radius: 5px;
-        box-shadow: 3px 3px var(--powder-blue);
+        box-shadow: 3px 3px rgba(0,0,0,0.5);
     }
 }
 
