@@ -1,14 +1,14 @@
 import React from 'react';
+import '../styles/header.css';
 
 export default function Naviation({ currentView,handlePageDisplay }) {
 
-
-
+    
     return (
         <div className='navlinks-container'>
 
             <div className='navlinks'>
-                <a href="#about" onClick={()=>handlePageDisplay('about')} className={currentView === 'about'? 'navlink active' : 'navlink'}>About Me</a>
+                <a href="#about" onClick={()=>handlePageDisplay('about')} className="navlink active">About Me</a>
             </div>
             <div className='navlinks'>
                 <a href="#portfolio" onClick={()=>handlePageDisplay('portfolio')} className={currentView === 'portfolio'? 'navlink active' : 'navlink'}>Portfolio</a>
