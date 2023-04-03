@@ -1,0 +1,63 @@
+@keyframes turn {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.1);
+        box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin-top:0;
+    user-select: none;
+
+}
+
+.about-content:hover img {
+    animation: turn 0.5s 1 linear;
+}
+
+#about-title {
+    padding-inline: 25px;
+    padding-block: 5px;
+    border-radius: 15px;
+    width: fit-content;
+    background-color: pink;
+    border: 3px solid hotpink;
+    margin-inline:auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#resume-title {
+    padding-inline: 25px;
+    padding-block: 5px;
+    border-radius: 15px;
+    width: fit-content;
+    background-color: rgb(83, 195, 255);
+    border: 3px solid rgb(56, 21, 255);
+    margin-inline:auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#profile-image {
+    margin-inline: auto;
+    width: 20vh;  
+    border-radius: 50%;
+    border: 5px solid pink;
+}
+
+.text {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 35px;
+    box-shadow: 0 0 15px 15px white;
+}

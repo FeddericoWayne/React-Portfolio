@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './pages/About';
+import Resume from './pages/Resume';
 import '../styles/project.css'
 
 export default function Project(props) {
@@ -68,7 +69,7 @@ export default function Project(props) {
                     <div className='contact'>Contact</div>    
                 </div>
                 <div className='resume-container in-view'>
-                    <div className='resume'>Resume</div>    
+                    <Resume />   
                 </div>
             </div>
         )
