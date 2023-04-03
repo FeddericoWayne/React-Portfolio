@@ -8,7 +8,7 @@ export default function Project(props) {
     if (props.currentView === 'about') {
         return (
             <div className='project-container'>
-                <div className='about-me-container in-view'>
+                <div className='about-me-container in-view-from-right'>
                     <About />    
                 </div>
                 <div className='portfolio-container'>
@@ -28,7 +28,7 @@ export default function Project(props) {
                 <div className='about-me-container'>
                     <div className='about-me'>About Me</div>    
                 </div>
-                <div className='portfolio-container in-view'>
+                <div className='portfolio-container in-view-from-left'>
                     <div className='portfolio'>Portfolio</div>    
                 </div>
                 <div className='contact-container'>
@@ -48,7 +48,7 @@ export default function Project(props) {
                 <div className='portfolio-container'>
                     <div className='portfolio'>Portfolio</div>    
                 </div>
-                <div className='contact-container in-view'>
+                <div className='contact-container in-view-from-right'>
                     <div className='contact'>Contact</div>    
                 </div>
                 <div className='resume-container'>
@@ -68,7 +68,7 @@ export default function Project(props) {
                 <div className='contact-container'>
                     <div className='contact'>Contact</div>    
                 </div>
-                <div className='resume-container in-view'>
+                <div className='resume-container in-view-from-left'>
                     <Resume />   
                 </div>
             </div>

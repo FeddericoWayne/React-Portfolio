@@ -6,6 +6,42 @@
     --periwinkle: rgba(130, 226, 252, 0.9);
 }
 
+@keyframes right-insert {
+    0% {
+        left: 220vw;
+    }
+    50% {
+        left: 5vw;
+    }
+    60% {
+        left: 7vw;
+    }
+    65% {
+        left: 5vw;
+    }
+    100% {
+        left: 5vw;
+    }
+}
+
+@keyframes left-insert {
+    0% {
+        left: -120vw;
+    }
+    50% {
+        left: 5vw;
+    }
+    60% {
+        left: 3vw;
+    }
+    65% {
+        left: 5vw;
+    }
+    100% {
+        left: 5vw;
+    }
+}
+
 .project-container {
     overflow: hidden;
     position: relative;
@@ -83,8 +119,12 @@
     transition-duration: 0.3s;
 }
 
-.in-view {
-    left: 5vw;
+.in-view-from-right {
+    animation: right-insert 0.7s 1 forwards;
+}
+
+.in-view-from-left {
+    animation: left-insert 0.7s 1 forwards;
 }
 
 .about-me-container:hover, 
