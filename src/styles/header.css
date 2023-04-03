@@ -5,12 +5,12 @@
     --ultraviolet: #564592;
     --cadet-grey: #93ACB5;
     --uranian-blue: #A9D3FF;
-    --powder-blue: #AFBED1;
+    --fall: #ff7c02;
     --heliotrope: #CA7DF9;
     --neon: #FFFF00;
 }
 
-@keyframes blink {
+@keyframes underline {
     0% {
         transform: scaleX(1);
 
@@ -43,7 +43,8 @@
     box-shadow: 0px 5px 20px 35px var(--uranian-blue);
     background-color: var(--uranian-blue);
     transform: scaleY(0);
-    transition: all;
+    transition: transform;
+    transform-origin: top;
     transition-duration: 0.3s;
 }
 
@@ -88,6 +89,7 @@
 }
 
 .navlinks-container {
+    position: relative;
     width: 100vw;
     height: 2rem;
     display: flex;
@@ -100,20 +102,35 @@
     transition-duration: 0.3s;
 }
 
-.navlinks-container:hover {
-    background-color: var(--uranian-blue);
-    /* TODO: think of hover effect for navlinks container */
-
+.navlinks-container::after {
+    z-index: 1;
+    position: absolute;
+    content:"";
+    width:100vw;
+    height: 120%;
+    background-color: var(--fall);
+    box-shadow: 0px 1px 10px 10px var(--fall);
+    transform: scaleY(0);
+    transition: transform;
+    transform-origin: bottom;
+    transition-duration: 0.3s;
 }
+
+.navlinks-container:hover::after {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
 
 .navlink:hover {
     text-shadow: 1px 1px rgba(0,0,0,0.4);
-    color: var(--persian-pink) !important;
+    color: var(--margorelle) !important;
 }
 
 .navlink:active {
-    color: var(--mindaro) !important;
-    transform: translateY(3px);
+    color: var(--cadet-grey) !important;
+    text-shadow: none;
+    transform:translateY(5px);
     transition: none;
 }
 
@@ -133,7 +150,7 @@
 }
 
 .navlink:hover::before {
-    animation: blink 0.3s 1;
+    animation: underline 0.3s 1;
 }
 
 
