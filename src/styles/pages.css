@@ -11,6 +11,18 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: grey ;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
 /* about-me page styling */
 .about-content {
     position: relative;
@@ -75,8 +87,8 @@
     padding-block: 15px;
     background-color: white;
     border-radius: 15px;
-    margin-top: 35px;
-    margin-bottom: 55px;
+    margin-top: 75px;
+    margin-bottom: 110px;
     box-shadow: 0 0 15px 15px white;
 }
 
@@ -105,13 +117,13 @@
     background-color: rgb(56, 21, 255);
     transform: scaleX(0);
     transition: transform;
-    transform-origin: left;
+    transform-origin: right;
     transition-duration: 0.3s;
 }
 
 #download:hover::after {
     transform: scaleX(1);
-    transform-origin: right;
+    transform-origin: left;
 }
 
 #download:hover {
@@ -135,7 +147,7 @@
     transition-duration: 0.3s;
 }
 
-#download:hover::before {
+#download:hover:before {
     transform: scaleX(1);
 }
 
@@ -150,4 +162,8 @@
     border-radius: 55px;
     transition: none;
     box-shadow: none;
+}
+
+.resume-content:hover #download {
+    animation: pulse 1s infinite;
 }
