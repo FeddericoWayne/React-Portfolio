@@ -170,6 +170,7 @@
     animation: pulse 2s infinite linear;
 }
 .resume-content:hover #download {
-    color:rgb(56, 21, 255)
+    color:rgb(56, 21, 255);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 
 }
