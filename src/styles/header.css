@@ -22,6 +22,32 @@
     }
 }
 
+@keyframes highlighted-right {
+    0% {
+        left: 120vw;
+    }
+
+    90% {
+        left: -15px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes highlighted-left {
+    0% {
+        left: -120vw;
+    }
+
+    90% {
+        left: 15px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 .header-container {
     display: flex;
     flex-direction: row;
@@ -79,7 +105,17 @@
     transition-duration: 0.3s;
 }
 
-.active {
+.active-right {
+    position: relative;
+    animation: highlighted-right 0.3s 1 forwards;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 70% 45%, 50% 100%, 50% 45%, 0% 45%);
+    background-color: var(--neon);
+    color: black;
+}
+
+.active-left {
+    position: relative;
+    animation: highlighted-left 0.3s 1 forwards;
     clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 70% 45%, 50% 100%, 50% 45%, 0% 45%);
     background-color: var(--neon);
     color: black;
@@ -181,7 +217,7 @@
         margin-right: 0.5rem;
     }
 
-    .active {
+    .active-right, .active-left {
         clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 60% 45%, 50% 100%, 40% 45%, 0% 45%);
     }
     
