@@ -1,5 +1,7 @@
 import React from 'react';
 import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import '../styles/project.css'
 
@@ -12,13 +14,13 @@ export default function Project(props) {
                     <About />    
                 </div>
                 <div className='portfolio-container'>
-                    <div className='portfolio'>Portfolio</div>    
-                </div>
-                <div className='contact-container'>
-                    <div className='contact'>Contact</div>    
+                    <div className='portfolio'>Previous Projects:</div>    
                 </div>
                 <div className='resume-container'>
-                    <div className='resume'>Resume</div>    
+                    <div className='contact-container'>Contact Me:</div>    
+                </div>
+                <div className='resume-container'>
+                    <div className='resume'>Skills:</div>    
                 </div>
             </div>
         )
@@ -29,13 +31,13 @@ export default function Project(props) {
                     <div className='about-me'>About Me</div>    
                 </div>
                 <div className='portfolio-container in-view-from-left'>
-                    <div className='portfolio'>Portfolio</div>    
-                </div>
-                <div className='contact-container'>
-                    <div className='contact'>Contact</div>    
+                    <Portfolio />  
                 </div>
                 <div className='resume-container'>
-                    <div className='resume'>Resume</div>    
+                    <div className='contact-container'>Contact Me:</div>    
+                </div>
+                <div className='resume-container'>
+                    <div className='resume'>Skills:</div>    
                 </div>
             </div>
         )
@@ -46,13 +48,13 @@ export default function Project(props) {
                     <div className='about-me'>About Me</div>    
                 </div>
                 <div className='portfolio-container'>
-                    <div className='portfolio'>Portfolio</div>    
+                    <div className='portfolio'>Previous Projects:</div>    
                 </div>
                 <div className='contact-container in-view-from-right'>
-                    <div className='contact'>Contact</div>    
+                    <Contact />  
                 </div>
                 <div className='resume-container'>
-                    <div className='resume'>Resume</div>    
+                    <div className='resume'>Skills:</div>    
                 </div>
             </div>
         )
@@ -63,10 +65,10 @@ export default function Project(props) {
                     <div className='about-me'>About Me</div>    
                 </div>
                 <div className='portfolio-container'>
-                    <div className='portfolio'>Portfolio</div>    
+                    <div className='portfolio'>Previous Projects:</div>    
                 </div>
-                <div className='contact-container'>
-                    <div className='contact'>Contact</div>    
+                <div className='resume-container'>
+                    <div className='contact-container'>Contact Me:</div>    
                 </div>
                 <div className='resume-container in-view-from-left'>
                     <Resume />   
