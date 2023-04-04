@@ -13,7 +13,6 @@
 @keyframes underline {
     0% {
         transform: scaleX(1);
-
         opacity: 100%;
     }
     100% {
@@ -164,7 +163,6 @@
 }
 
 .navlink:active {
-    /* find a color that works */
     color: white !important;
     text-shadow: none;
     transform:translateY(5px);
