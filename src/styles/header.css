@@ -108,8 +108,8 @@
     content:"";
     width:100vw;
     height: 120%;
-    background: linear-gradient(180deg, var(--uranian-blue) 0%,var(--fall) 100%);
-    box-shadow: 0px 1px 10px 10px var(--fall);
+    background: linear-gradient(180deg, var(--margorelle) 0%,var(--uranian-blue) 100%);
+    box-shadow: 0px 1px 10px 10px var(--uranian-blue);
     transform: scaleY(0);
     transition: transform;
     transform-origin: bottom;
@@ -124,11 +124,12 @@
 
 .navlink:hover {
     text-shadow: 1px 1px rgba(0,0,0,0.4);
-    color: var(--margorelle) !important;
+    color: var(--fall) !important;
 }
 
 .navlink:active {
-    color: var(--cadet-grey) !important;
+    /* find a color that works */
+    color: white !important;
     text-shadow: none;
     transform:translateY(5px);
     transition: none;
@@ -193,8 +194,6 @@
     }
 
     .navlink:active {
-        color: var(--mindaro) !important;
-        transform: translateY(3px);
         transition: none;
     }
 

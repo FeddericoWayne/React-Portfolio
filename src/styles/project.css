@@ -50,8 +50,7 @@
     align-items: center;
     justify-content: center;
     padding-block: 1.5rem;
-    min-height: 80vh;
-    height:fit-content;
+    height: 80vh;
     background-image: url('../../public/assets/bg/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -65,8 +64,8 @@
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
-    min-height: 70vh;
-    height:fit-content;
+    height: 78vh;
+    overflow-y: scroll;
     border: 5px solid white;
     background-color: var(--pastel-pink);
     border-radius: 25px 0px 0px 25px;
@@ -81,7 +80,8 @@
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
-    height: 70vh;
+    height: 78vh;
+    overflow-y: scroll;
     border: 5px solid white;
     background-color: var(--zesty);
     border-radius: 0px 25px 25px 0;
@@ -96,7 +96,8 @@
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
-    height: 70vh;
+    height: 78vh;
+    overflow-y: scroll;
     border: 5px solid white;
     background-color: var(--heliotrope);
     border-radius: 25px 0px 0px 25px;
@@ -111,7 +112,8 @@
     box-sizing: border-box;
     padding:25px;
     width: 90vw;
-    height: 70vh;
+    height: 78vh;
+    overflow-y: scroll;
     border: 5px solid white;
     background-color: var(--periwinkle);
     border-radius: 0px 25px 25px 0;
