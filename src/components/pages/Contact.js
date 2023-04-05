@@ -19,13 +19,13 @@ export default function Contact() {
                     <label>Message:</label>
                     <textarea onBlur={""} id="message" placeholder='Enter Your Message Here ...'></textarea>
                 </div>
-                <button  type='submit' id='submit'>Submit</button>
+                <button onClick={""} type='submit' id='submit'>Submit</button>
             </div>
             <div className='contact-info-container'>
                 <h4>Phone:</h4>
                 <p>646-651-0384</p>
                 <h4>Email:</h4>
-                <a href='mailto:jackiew1120@hotmail.com'>jackiew1120@hotmail</a>
+                <a href='mailto:jackiew1120@hotmail.com'>jackiew1120@hotmail.com</a>
             </div>
         </div>
 
