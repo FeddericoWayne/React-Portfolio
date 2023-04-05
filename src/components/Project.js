@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
+import projects from './projects';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import '../styles/project.css'
@@ -31,7 +32,7 @@ export default function Project(props) {
                     <div className='about-me'>About Me</div>    
                 </div>
                 <div className='portfolio-container in-view-from-left'>
-                    <Portfolio />  
+                    <Portfolio projects={projects}/>  
                 </div>
                 <div className='resume-container'>
                     <div className='contact-container'>Contact Me:</div>    
