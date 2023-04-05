@@ -10,7 +10,7 @@ export default function Portfolio(props) {
             <h4 id='portfolio-title'>Previous Projects:</h4>
             {props.projects.map((project)=>{
                 return (
-                    <div className='app-container'>
+                    <div key={project.title} className='app-container'>
                         <h3 className='app-title'>{project.title}</h3>
                         <img className='screenshot' src={project.src} alt={project.title}></img>
                         <div className='link-container'>

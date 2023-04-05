@@ -46,6 +46,51 @@
     }
 }
 
+@keyframes border-color {
+    0% {
+        border-top: 5px solid rgb(255, 145, 42);
+        border-right: 5px solid rgb(255, 69, 28);
+        border-bottom: 5px solid rgb(255, 145, 42);
+        border-left: 5px solid rgb(255, 221, 169);
+        box-shadow: 5px 0px 5px rgba(0,0,0,0.3);
+    }
+    25% {
+        border-top: 5px solid rgb(255, 221, 169);
+        border-right: 5px solid rgb(255, 145, 42);
+        border-bottom: 5px solid rgb(255, 69, 28);
+        border-left: 5px solid rgb(255, 145, 42);
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+    }
+    50% {
+        border-top: 5px solid rgb(255, 145, 42);
+        border-right: 5px solid rgb(255, 221, 169);
+        border-bottom: 5px solid rgb(255, 145, 42);
+        border-left: 5px solid rgb(255, 69, 28);
+        box-shadow: -5px 0px 5px rgba(0,0,0,0.3);
+    }
+    75% {
+        border-top: 5px solid rgb(255, 69, 28);
+        border-right: 5px solid rgb(255, 145, 42);
+        border-bottom: 5px solid rgb(255, 221, 169);
+        border-left: 5px solid rgb(255, 145, 42);
+        box-shadow: 0px -5px 5px rgba(0,0,0,0.3);
+    }
+    99%{
+        border-top: 5px solid rgb(255, 145, 42);
+        border-right: 5px solid rgb(255, 69, 28);
+        border-bottom: 5px solid rgb(255, 145, 42);
+        border-left: 5px solid rgb(255, 221, 169);
+        box-shadow: 5px 0px 5px rgba(0,0,0,0.3);
+    }
+    100%{
+        border-top: 5px solid rgb(255, 145, 42);
+        border-right: 5px solid rgb(255, 69, 28);
+        border-bottom: 5px solid rgb(255, 145, 42);
+        border-left: 5px solid rgb(255, 221, 169);
+        box-shadow: 5px 0px 5px rgba(0,0,0,0.3);
+    }
+}
+
 /* about-me page styling */
 .about-content {
     position: relative;
@@ -222,7 +267,8 @@
 }
 
 .portfolio-content:hover .screenshot {
-    border: 5px solid black;
+    animation: border-color 0.5s infinite linear;
+
 }
 
 .app-container {
@@ -236,7 +282,7 @@
     height: fit-content;
     width:70vw;
     border: 5px solid grey;
-    border-radius: 25px;
+    border-radius: 15px;
     margin-bottom: 25px;
     transition: all;
     transition-duration: 0.3s;
