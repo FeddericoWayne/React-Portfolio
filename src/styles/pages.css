@@ -91,6 +91,18 @@
     }
 }
 
+@keyframes glow {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 10px #b38bfe;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
 /* about-me page styling */
 .about-content {
     position: relative;
@@ -323,13 +335,6 @@
     box-shadow: none !important;
 }
 
-
-
-
-
-
-
-
 /* contact page styling */
 #contact-title {
     padding-inline: 25px;
@@ -342,3 +347,92 @@
     margin-top: 0;
     margin-bottom: 15px;
 }
+
+.contact-info-container {
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-top: 35px;
+    box-shadow: 0 0 15px 15px white;
+}
+
+.contact-info-container h4 {
+    margin-bottom: 5px;
+}
+
+.contact-info-container p {
+    margin-top: 5px;
+}
+
+.contact-info-container a {
+    text-decoration: none;
+    color: black;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.contact-content:hover a {
+    color: rgb(113, 24, 255);
+    animation: glow 1s infinite linear;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin-inline:auto;
+}
+
+.label {
+    margin-right: 5px;
+}
+
+.input-container {
+    margin-block: 10px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+#message {
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    resize: vertical;
+    margin-top: 5px;
+    width: 65vw;
+    height: 25vh;
+    margin-inline: auto;
+}
+
+#submit {
+    margin-inline:auto;
+    width:fit-content;
+    padding-inline: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 3px solid rgb(113, 24, 255);
+    color: rgb(113, 24, 255);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+#submit:hover {
+    border: 3px solid #b38bfe;
+    color: #b38bfe;
+    transform: translateY(-3px);
+}
+
+#submit:active {
+    transition:none;
+    border: 3px solid darkgrey;
+    background-color: grey;
+    color: white;
+    box-shadow: none;
+    transform: translateY(3px);
+}
+

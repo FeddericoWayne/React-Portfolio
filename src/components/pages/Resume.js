@@ -5,7 +5,7 @@ export default function Resume() {
 
     return (
         <div className='resume-content'>
-            <h4 id='resume-title'>Skills:</h4>
+            <h4 id='resume-title'>Proficiencies:</h4>
             <ul className='list-container'>
                 <li>html</li>
                 <li>css</li>
