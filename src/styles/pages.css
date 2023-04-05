@@ -424,7 +424,7 @@
 #submit:hover {
     border: 3px solid #b38bfe;
     color: #b38bfe;
-    transform: translateY(-3px);
+
 }
 
 #submit:active {
