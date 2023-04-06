@@ -84,6 +84,7 @@
     width: 90vw;
     height: 78vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     overflow-x: hidden;
     border: 5px solid white;
     background-color: var(--zesty);

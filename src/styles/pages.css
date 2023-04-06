@@ -103,6 +103,20 @@
     }
 }
 
+@keyframes upwards {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 /* about-me page styling */
 .about-content {
     position: relative;
@@ -110,7 +124,6 @@
     flex-direction: column;
     margin-top:0;
     user-select: none;
-
 }
 
 .about-content:hover img {
@@ -264,10 +277,10 @@
 .app-title {
     padding-top:5px;
     padding-bottom: 35px;
-    padding-inline: 25px;
+    width: 200px;
     background-color: grey;
     color:rgb(0, 0, 0);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 60% 55%, 50% 100%, 40% 55%, 0% 55%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 55% 55%, 50% 100%, 45% 55%, 0% 55%);
     animation: hover 2s infinite linear;
     transition: all;
     transition-duration: 0.3s;
@@ -287,7 +300,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .screenshot {
@@ -333,6 +347,64 @@
     border: 4px solid lightgrey !important;
     color: white !important;
     box-shadow: none !important;
+}
+
+.app-container .partition {
+    margin-top: 35px;
+    width: 40vw;
+    height: 4px;
+    background-color: grey;
+    border-radius: 3px;
+}
+
+#back {
+    z-index: 0;
+    position: relative;
+    margin-top: 35px;
+    text-decoration: none;
+    color: grey;
+    font-size: 0.8rem;
+    transition: transform;
+    transition-duration: 0.3s;
+
+}
+
+#back::after {
+    z-index: -1;
+    position: absolute;
+    content: '⇧';
+    color: grey;
+    font-size: 1rem;
+    top: -10%;
+    right: -35%;
+    transition: transform;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    transform: scaleY(0);
+}
+
+#back::before {
+    z-index: -1;
+    position: absolute;
+    content: '⇧';
+    color: grey;
+    font-size: 1rem;
+    top: -10%;
+    left: -35%;
+    transition: transform;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    transform: scaleY(0);
+}
+
+#back:active {
+    transition: none;
+    transform: translateY(3px);
+}
+
+.portfolio-content:hover #back::after, .portfolio-content:hover #back::before {
+    color: black;
+    animation: upwards 1s infinite linear;
 }
 
 /* contact page styling */
