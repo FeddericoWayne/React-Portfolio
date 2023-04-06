@@ -3,17 +3,16 @@ import '../../styles/pages.css';
 
 export default function Contact() {
 
-    const [warning, setWarning] = useState(false);
-    const [emailWarning, setEmailWarning] = useState(false);
+    const [ nameWarning, setNameWarning ] = useState(false);
+    const [ emailWarning, setEmailWarning ] = useState(false);
+    const [ messageWarning, setMessageWarning ] = useState(false);
 
-    const checkContent = (e) => {
+    const checkName = (e) => {
 
         if (e.target.value === '') {
-            console.log('empty field')
-            setWarning(true);
+            setNameWarning(true);
         } else {
-            setWarning(false);
-            console.log('ok')
+            setNameWarning(false);
         }
 
     };
@@ -23,38 +22,67 @@ export default function Contact() {
         const regEx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ ;
 
         if (e.target.value.match(regEx)) {
-            console.log('email ok')
             setEmailWarning(false);
+        } else if (e.target.value === '') {
+            setEmailWarning(true);
         } else {
-            console.log('invalid email')
             setEmailWarning(true);
         }
     };
+
+    const checkMessage = (e) => {
+
+        if (e.target.value === '') {
+            setMessageWarning(true);
+        } else {
+            setMessageWarning(false);
+        }
+    }
 
 
     return (
         <div className='contact-content'>
             <h4 id='contact-title'>Contact Me:</h4>
-
-
                 <div className='form-container'>
-                    <p id='warning'>Name, Email, and Message are Required!</p>
-                    <div className='input-container'>
-                        <label className='label'>Name:</label>
-                        <input onBlur={checkContent} id="name" type="text" placeholder='Enter Your Name Here ...'></input>
-                    </div>
-                    <div className='input-container'>
-                        <label className='label'>Email:</label>
-                        <input onBlur={checkEmail} id="email" type='text' placeholder='Enter Your Email Here ...'></input>
-                    </div>
-                    <div className='message-container'>
-                        <label>Message:</label>
-                        <textarea onBlur={checkContent} id="message" placeholder='Enter Your Message Here ...'></textarea>
-                    </div>
+                    {nameWarning ? (
+                        <div className='input-container'>
+                            <label className='label'>Name:</label>
+                            <input onBlur={checkName} id="name" type="text" placeholder='Enter Your Name Here ...'></input>
+                            <p className='warning'>Name is a required field!</p>
+                        </div>
+                    ) : (
+                        <div className='input-container'>
+                            <label className='label'>Name:</label>
+                            <input onBlur={checkName} id="name" type="text" placeholder='Enter Your Name Here ...'></input>
+                        </div>
+                    )}
+                    {emailWarning ? (
+                        <div className='input-container'>
+                            <label className='label'>Email:</label>
+                            <input onBlur={checkEmail} id="email" type='text' placeholder='Enter Your Email Here ...'></input>
+                            <p className='warning'>Please enter a valid email!</p>
+                        </div>
+                    ) : (
+                        <div className='input-container'>
+                            <label className='label'>Email:</label>
+                            <input onBlur={checkEmail} id="email" type='text' placeholder='Enter Your Email Here ...'></input>
+                        </div>
+                    )}
+                    {messageWarning ? (
+                        <div className='message-container'>
+                            <label>Message:</label>
+                            <textarea onBlur={checkMessage} id="message" placeholder='Enter Your Message Here ...'></textarea>
+                            <p className='warning'>Please enter your message!</p>
+                        </div>
+                    ) : (
+                        <div className='message-container'>
+                            <label>Message:</label>
+                            <textarea onBlur={checkMessage} id="message" placeholder='Enter Your Message Here ...'></textarea>  
+                        </div>
+                    )}
                     <button type='submit' id='submit'>Submit</button>
                 </div>
 
-            
             <div className='contact-info-container'>
                 <h4>Phone:</h4>
                 <p>646-651-0384</p>
