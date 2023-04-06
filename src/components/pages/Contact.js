@@ -48,7 +48,7 @@ export default function Contact() {
                         <div className='input-container'>
                             <label className='label'>Name:</label>
                             <input onBlur={checkName} id="name" type="text" placeholder='Enter Your Name Here ...'></input>
-                            <p className='warning'>Name is a required field!</p>
+                            <p className='warning'>Oops! Please enter your name!</p>
                         </div>
                     ) : (
                         <div className='input-container'>
@@ -60,7 +60,7 @@ export default function Contact() {
                         <div className='input-container'>
                             <label className='label'>Email:</label>
                             <input onBlur={checkEmail} id="email" type='text' placeholder='Enter Your Email Here ...'></input>
-                            <p className='warning'>Please enter a valid email!</p>
+                            <p className='warning'>Oops! Please enter a valid email!</p>
                         </div>
                     ) : (
                         <div className='input-container'>
@@ -72,7 +72,7 @@ export default function Contact() {
                         <div className='message-container'>
                             <label>Message:</label>
                             <textarea onBlur={checkMessage} id="message" placeholder='Enter Your Message Here ...'></textarea>
-                            <p className='warning'>Please enter your message!</p>
+                            <p className='warning'>Oops! Please enter your message!</p>
                         </div>
                     ) : (
                         <div className='message-container'>
