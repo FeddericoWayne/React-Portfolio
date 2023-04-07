@@ -43,6 +43,24 @@
     }
 }
 
+@keyframes bg-shift {
+    0% {
+        background-position: right;
+    }
+    25% {
+        background-position: bottom;
+    }
+    50% {
+        background-position: left;
+    }
+    75% {
+        background-position: top;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
 /* project component styling */
 .project-container {
     user-select: none;
@@ -58,6 +76,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: bg-shift 60s ease-in-out infinite;
 }
 
 .about-me-container {
