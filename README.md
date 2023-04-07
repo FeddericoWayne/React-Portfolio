@@ -1,4 +1,4 @@
-# Portfolio Build with React <img src="https://img.shields.io/badge/license-MIT-yellow?style=plastic">
+# Portfolio Built with React <img src="https://img.shields.io/badge/license-MIT-yellow?style=plastic">
 
   ## <a id="Description">Description</a> 
 
