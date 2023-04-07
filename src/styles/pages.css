@@ -117,6 +117,30 @@
     }
 }
 
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(7px);
+    }
+    15% {
+        transform: translateX(-7px);
+    }
+    20% {
+        transform: translateX(7px);
+    }
+    25% {
+        transform: translateX(-7px);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* about-me page styling */
 .about-content {
     position: relative;
@@ -512,5 +536,27 @@
     color: red;
     margin-bottom: 0;
     font-size: 0.8rem;
+    animation: shake 1s infinite linear;
+}
+
+.submit-warning {
+    color: red;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.green {
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    padding-top:15vh;
+    border-radius: 25px;
+    top: 40vh;
+    left: 20vw;
+    height: 20vh;
+    width: 60vw;
+    color: white;
+    font-size: 1rem;
+    animation: hover 0.5s infinite linear;
 }
 
