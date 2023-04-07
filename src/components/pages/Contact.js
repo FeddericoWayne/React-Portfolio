@@ -21,7 +21,7 @@ export default function Contact() {
 
     const checkEmail = (e) => {
 
-        const regEx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ ;
+        const regEx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i ;
 
         if (e.target.value.match(regEx)) {
             setEmailWarning("");
