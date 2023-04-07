@@ -1,9 +1,9 @@
+// imports react and stylesheet for navbar
 import React from 'react';
 import '../styles/header.css';
 
 export default function Naviation({ currentView,handlePageDisplay }) {
 
-    
     return (
         <div className='navlinks-container'>
 
@@ -21,7 +21,6 @@ export default function Naviation({ currentView,handlePageDisplay }) {
             </div>
 
         </div>
-
 
     )
 }

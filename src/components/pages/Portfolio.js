@@ -1,3 +1,4 @@
+// imports react and stylesheet
 import React from 'react';
 import '../../styles/pages.css';
 
@@ -17,8 +18,8 @@ export default function Portfolio(props) {
                             <h3 className='app-title'>{project.title}</h3>
                             <img className='screenshot' src={project.src} alt={project.title}></img>
                             <div className='link-container'>
-                                <a href={project.appUrl} target='_blank' className='app-link'>Go to Application</a>
-                                <a href={project.repo} target='_blank' className='app-link'>GitHub Repo</a>
+                                <a href={project.appUrl} target='blank' className='app-link'>Go to Application</a>
+                                <a href={project.repo} target='blank' className='app-link'>GitHub Repo</a>
                             </div>
                             <a href='#portfolio-title' id='back'>Back to Top</a>
                         </div>
@@ -30,8 +31,8 @@ export default function Portfolio(props) {
                         <h3 className='app-title'>{project.title}</h3>
                         <img className='screenshot' src={project.src} alt={project.title}></img>
                         <div className='link-container'>
-                            <a href={project.appUrl} target='_blank' className='app-link'>Go to Application</a>
-                            <a href={project.repo} target='_blank' className='app-link'>GitHub Repo</a>
+                            <a href={project.appUrl} target='blank' className='app-link'>Go to Application</a>
+                            <a href={project.repo} target='blank' className='app-link'>GitHub Repo</a>
                         </div>
                         <hr className='partition'/>
                     </div>

@@ -1,3 +1,4 @@
+// imports react and stylesheet
 import React from 'react';
 import '../../styles/pages.css';
 

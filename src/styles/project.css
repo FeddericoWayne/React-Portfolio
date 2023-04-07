@@ -6,6 +6,7 @@
     --periwinkle: rgba(130, 226, 252, 0.9);
 }
 
+/* animations */
 @keyframes right-insert {
     0% {
         left: 220vw;
@@ -42,6 +43,7 @@
     }
 }
 
+/* project component styling */
 .project-container {
     user-select: none;
     overflow: hidden;

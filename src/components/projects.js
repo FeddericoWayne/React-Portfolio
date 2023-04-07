@@ -1,3 +1,4 @@
+// array of projects to plug into Project component as props
 const projects = [
     {
         title:'Tech Blog',
@@ -37,4 +38,5 @@ const projects = [
     }
 ];
 
+// exports project array
 module.exports = projects;

@@ -1,13 +1,16 @@
+// imports react, useState hook, and stylesheet
 import React, { useState } from 'react';
 import '../../styles/pages.css';
 
 export default function Contact() {
 
+    // creates variables for useState hook for warnings and sets their default states to undefined
     const [ nameWarning, setNameWarning ] = useState(undefined);
     const [ emailWarning, setEmailWarning ] = useState(undefined);
     const [ messageWarning, setMessageWarning ] = useState(undefined);
     const [ submitWarning, setSubmitWarning ] = useState(undefined);
 
+    // function that checks if name is entered
     const checkName = (e) => {
 
         if (e.target.value === '') {
@@ -19,6 +22,7 @@ export default function Contact() {
 
     };
 
+    // function that checks if entered email is valid
     const checkEmail = (e) => {
 
         const regEx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i ;
@@ -34,6 +38,7 @@ export default function Contact() {
         }
     };
 
+    // function that checks if message is entered
     const checkMessage = (e) => {
 
         if (e.target.value === '') {
@@ -44,9 +49,11 @@ export default function Contact() {
         }
     };
 
+    // function that handles contact form submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // if submit button is clicked right after page load
         if (nameWarning === undefined || emailWarning === undefined || messageWarning === undefined) {
             
             document.getElementById("submit-warning").classList.remove("green");
@@ -57,6 +64,7 @@ export default function Contact() {
             return;
         };
 
+        // if fields are not filled in
         if (nameWarning.length || emailWarning.length || messageWarning.length) {
 
             document.getElementById("submit-warning").classList.remove("green");
@@ -67,6 +75,7 @@ export default function Contact() {
             return;
         };
 
+        // upon successful submission
         if (!nameWarning.length && !emailWarning.length && !messageWarning.length) {
 
             document.getElementById("submit-warning").classList.add("green");

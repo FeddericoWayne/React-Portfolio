@@ -1,3 +1,4 @@
+/* css variables */
 :root {
     --margorelle: #724CF9;
     --mindaro: #EDF67D;
@@ -10,6 +11,7 @@
     --neon: #FFFF00;
 }
 
+/* animations */
 @keyframes underline {
     0% {
         transform: scaleX(1);
@@ -47,6 +49,7 @@
     }
 }
 
+/* header and navbar styling */
 .header-container {
     display: flex;
     flex-direction: row;
@@ -188,7 +191,7 @@
     animation: underline 0.3s 1;
 }
 
-
+/* media query for narrow viewports */
 @media screen and (max-width: 860px) {
     .header-container {
         display: block;

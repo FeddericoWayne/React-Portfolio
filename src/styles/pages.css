@@ -1,3 +1,4 @@
+/* animations */
 @keyframes turn {
     0% {
         transform: rotate(0deg) scale(1);
@@ -179,106 +180,6 @@
     padding: 25px;
     margin-top: 35px;
     box-shadow: 0 0 15px 15px white;
-}
-
-/* resume page styling */
-#resume-title {
-    padding-inline: 25px;
-    padding-block: 5px;
-    border-radius: 15px;
-    width: fit-content;
-    background-color: rgb(83, 195, 255);
-    border: 3px solid rgb(56, 21, 255);
-    margin-inline:auto;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.list-container {
-    width: 60vw;
-    list-style: none;
-    margin-inline: auto;
-    justify-content: center;
-    align-items: center;
-    padding-left:0;
-    padding-block: 15px;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 75px;
-    margin-bottom: 110px;
-    box-shadow: 0 0 15px 15px white;
-}
-
-#download {
-    z-index: 1;
-    position: relative;
-    text-decoration: none;
-    color: black;
-    padding-inline: 25px;
-    padding-block: 5px;
-    border: 5px solid rgb(56, 21, 255);
-    border-radius: 55px;
-    transition: all;
-    transition-duration: 0.3s;
-}
-
-#download::after {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left:0;
-    top:0;
-    border-radius: 55px;
-    background-color: rgb(83, 195, 255);
-}
-
-#download:hover {
-
-    border:5px solid rgb(56, 21, 255);
-    padding-right: 37px;
-    padding-left: 20px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-}
-
-#download::before {
-    position: absolute;
-    content: ">>";
-    color: rgb(56, 21, 255);
-    width: 100%;
-    height: 100%;
-    top: 12%;
-    left: 35%;
-    transform: scaleX(0);
-    transition: transform;
-    transition-duration: 0.3s;
-}
-
-#download:hover:before {
-    transform: scaleX(1);
-}
-
-#download:active {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    background-color: darkgray;
-    padding-right: 37px;
-    padding-left: 20px;
-    border: 8px solid grey;
-    border-radius: 55px;
-    transition: none;
-    box-shadow: none;
-}
-
-.resume-content:hover #download::after {
-    animation: pulse 2s infinite linear;
-}
-.resume-content:hover #download {
-    color:rgb(56, 21, 255);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-
 }
 
 /* portfolio page styling */
@@ -560,3 +461,102 @@
     animation: hover 0.5s infinite linear;
 }
 
+/* resume page styling */
+#resume-title {
+    padding-inline: 25px;
+    padding-block: 5px;
+    border-radius: 15px;
+    width: fit-content;
+    background-color: rgb(83, 195, 255);
+    border: 3px solid rgb(56, 21, 255);
+    margin-inline:auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.list-container {
+    width: 60vw;
+    list-style: none;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    padding-left:0;
+    padding-block: 15px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 75px;
+    margin-bottom: 110px;
+    box-shadow: 0 0 15px 15px white;
+}
+
+#download {
+    z-index: 1;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding-inline: 25px;
+    padding-block: 5px;
+    border: 5px solid rgb(56, 21, 255);
+    border-radius: 55px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+#download::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    border-radius: 55px;
+    background-color: rgb(83, 195, 255);
+}
+
+#download:hover {
+
+    border:5px solid rgb(56, 21, 255);
+    padding-right: 37px;
+    padding-left: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+#download::before {
+    position: absolute;
+    content: ">>";
+    color: rgb(56, 21, 255);
+    width: 100%;
+    height: 100%;
+    top: 12%;
+    left: 35%;
+    transform: scaleX(0);
+    transition: transform;
+    transition-duration: 0.3s;
+}
+
+#download:hover:before {
+    transform: scaleX(1);
+}
+
+#download:active {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    background-color: darkgray;
+    padding-right: 37px;
+    padding-left: 20px;
+    border: 8px solid grey;
+    border-radius: 55px;
+    transition: none;
+    box-shadow: none;
+}
+
+.resume-content:hover #download::after {
+    animation: pulse 2s infinite linear;
+}
+.resume-content:hover #download {
+    color:rgb(56, 21, 255);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+}

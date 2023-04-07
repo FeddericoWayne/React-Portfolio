@@ -1,3 +1,4 @@
+// imports necessary packages, stylesheet, and react components
 import React from 'react';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
@@ -8,6 +9,7 @@ import '../styles/project.css'
 
 export default function Project(props) {
 
+    // if current view is set to the about-me page
     if (props.currentView === 'about') {
         return (
             <div className='project-container'>
@@ -25,6 +27,8 @@ export default function Project(props) {
                 </div>
             </div>
         )
+    
+    // if current view is set to the portfolio page
     } else if (props.currentView === 'portfolio') {
         return (
             <div className='project-container'>
@@ -42,6 +46,8 @@ export default function Project(props) {
                 </div>
             </div>
         )
+
+    // if current view is set to the contact page
     } else if (props.currentView === 'contact') {
         return (
             <div className='project-container'>
@@ -59,6 +65,7 @@ export default function Project(props) {
                 </div>
             </div>
         )
+    // if current view is set to the resume page
     } else {
         return (
             <div className='project-container'>

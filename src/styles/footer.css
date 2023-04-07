@@ -6,6 +6,7 @@
     --meadow: #d0fbff;
 }
 
+/* animations */
 @keyframes spin {
     0% {
         transform: rotate(0deg) scale(1);
@@ -70,6 +71,7 @@
     }
 }
 
+/* footer styling */
 .footer-container {
     z-index: 1;
     position: relative;
@@ -136,6 +138,7 @@
     transform: translateY(3px);
 }
 
+/* media query for narrow viewports */
 @media screen and (max-width: 670px) {
     .footer-container {
         display: block;
