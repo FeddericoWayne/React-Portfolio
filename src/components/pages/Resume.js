@@ -20,7 +20,7 @@ export default function Resume() {
                 <li>ADOBE Photoshop</li>
                 <li>ADOBE Illustrator</li>
             </ul>
-            <a href='' id="download">Download Resume</a>
+            <a href='assets/documents/fred-diaz-wang-resume.pdf' id="download" download>Download Resume</a>
         </div>
 
     )
