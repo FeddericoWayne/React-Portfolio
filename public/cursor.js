@@ -17,7 +17,7 @@ function cursorEffect(x,y) {
     // removes created div once effect is complete
     setTimeout(()=> {
         cursor.remove();
-    },1500)
+    },500)
 
 }
 
