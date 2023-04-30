@@ -1,6 +1,12 @@
 // array of projects to plug into Project component as props
 const projects = [
     {
+        title: 'Open Source',
+        src: 'assets/images/Open-Source.png',
+        appUrl: 'https://open-source.herokuapp.com/',
+        repo: 'https://github.com/mshaari/open-source',
+    },
+    {
         title:'Tech Blog',
         src: 'assets/images/Tech-Blog.png',
         appUrl: 'https://freds-tech-blog.herokuapp.com/',
